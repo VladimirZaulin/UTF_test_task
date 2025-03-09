@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from restapp.views import FoodAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/foods', FoodAPIView.as_view())
 
 ]
